@@ -26,6 +26,9 @@ function calculate() {
         }
         result = (num1 / num2).toFixed(4);
         break;
+      case "Select":
+          document.getElementById("result").innerHTML="Result : Please select an Operator";
+          return;
       default:
         result = NaN;
     }
@@ -38,6 +41,6 @@ function calculate() {
   function clearInputs() {
     document.getElementById("num1").value = "";
     document.getElementById("num2").value = "";
-    document.getElementById("operator").value = "+";
+    document.getElementById("operator").value = "Select";
     document.getElementById("result").innerHTML = "Result: ";
   }
